@@ -1,22 +1,31 @@
-import React, {useState} from "react"
+import React from "react"
 import styled from 'styled-components'
 import './hamburgerButton.css'
 
 
 const Button = styled.div`
-  border: none
+  border: none;
+  outline: none;
+  postion: relative;
+  top: 0;
+
+  @media (min-width: 768px) {
+    display: none;
+}
+
 `
 
-const HamburgerButton = () => {
-    const [active, setActive] = useState(false)
+const HamburgerButton = (props) => {
   
   return (
-    <Button id="nav-icon" className={active ? 'open' : null} onClick={() => {setActive(!active)}}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </Button>
+    <>
+      <Button id="nav-icon" className={props.active ? 'open' : null} onClick={props.handleClick}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </Button>
+    </>
   )
 }
 

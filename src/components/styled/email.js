@@ -13,7 +13,7 @@ const Email = styled.input`
 
   /* Moblie */
   @media (max-width: 425px) {
-   width: 100%;
+   width: 85%;
 }
 `;
 

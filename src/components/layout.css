@@ -1,6 +1,5 @@
 html {
-  font-family: -apple-system,  Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Circular, Helvetica, Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -622,3 +621,4 @@ pre tt:after {
     font-size: 100%;
   }
 }
+

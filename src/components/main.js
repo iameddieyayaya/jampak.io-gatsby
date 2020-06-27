@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 import Button from './styled/button'
 import Email from './styled/email'
-
-
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const Title = styled.h1`
   padding-top: 70px;
@@ -42,7 +41,7 @@ const MainWrapper = styled.div`
   }
 `
 
-const BackgroundSection = ({ className }) => (
+const BackgroundSection = ({ className, form }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -58,6 +57,7 @@ const BackgroundSection = ({ className }) => (
     render={data => {
       // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid
+
       return (
           <BackgroundImage
           Tag="section"
@@ -70,12 +70,10 @@ const BackgroundSection = ({ className }) => (
                 <Title>Intimate Shows Anywhere</Title>
                 <Subtitle>Host</Subtitle>
                 <Subtitle>Book</Subtitle>
-                <Subtitle>Build a Team</Subtitle>
+                <Subtitle>Build A Team</Subtitle>
                 <Subtitle>Remix & Collab</Subtitle>
-                <Subtitle>Find up & coming artist</Subtitle>
-                <Email type='email' placeholder='Want to stay up to date?' />
-                <br />
-                <Button>Subscribe</Button>
+                <Subtitle>Find Up & Coming Artist</Subtitle>
+                {form}
               </div>              
             </MainWrapper>
           </BackgroundImage>

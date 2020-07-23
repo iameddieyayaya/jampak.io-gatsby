@@ -1,8 +1,7 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
-import { PageProps, Link } from "gatsby"
-
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import SEO from "../components/seo"
 
 const Perform = (props) => (

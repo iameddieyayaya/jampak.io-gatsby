@@ -1,10 +1,9 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
+import Layout from "../components/layout"
 import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
-import Img from 'gatsby-image'
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import venmo from '../images/venmo.png'
@@ -63,20 +62,20 @@ const BackgroundSection = ({ className }) => (
                     <h1>Contribute</h1>
                     <div>
                       <div>
-                        <a href="https://venmo.com/Eduardo-Gomez-27" alt="venmo" target="_blank" >
-                           <img width='128px' src={venmo}></img>
+                        <a href="https://venmo.com/Eduardo-Gomez-27" alt="venmo" target="_blank" rel="noreferrer" >
+                           <img width='128px' src={venmo} alt="venmo"></img>
                         </a>
                       </div>
                       <div>
-                        <a href='https://github.com/iameddieyayaya/jampak.io' target="_blank">               
+                        <a href='https://github.com/iameddieyayaya/jampak.io' target="_blank" rel="noreferrer">               
                           <img src={github} alt="Github Repo" style={{filter: 'invert(1)'}}></img>
                         </a>
                       </div>
                       <div>
                         <div>
                           <a className="twitter-share-button"
-                            href="https://twitter.com/intent/tweet?text=Friends%20check%20out%20this%20app!&url=http://jampak.io/&hashtags=jampak,singersongwriter,livemusic" target="_blank">
-                              <img width='128px' src={twitter}></img>
+                            href="https://twitter.com/intent/tweet?text=Friends%20check%20out%20this%20app!&url=http://jampak.io/&hashtags=jampak,singersongwriter,livemusic" target="_blank" rel="noreferrer">
+                              <img width='128px' src={twitter} alt="twitter"></img>
                           </a>
                         </div>
                       </div>

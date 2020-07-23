@@ -1,8 +1,8 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
+import Layout from "../components/layout"
 import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 

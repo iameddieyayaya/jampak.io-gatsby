@@ -16,7 +16,13 @@ import Footer from './footer'
 import Header from "./header"
 import "./layout.css"
 
+const Main = styled.main`
 
+`
+
+const Foot = styled.footer`
+
+`
 
 
 const Layout = ({ children }) => {
@@ -34,10 +40,10 @@ const Layout = ({ children }) => {
   return (
     <>
           <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
-          <footer>
+          <Main>{children}</Main>
+          <Foot>
               <Footer  siteTitle={data.site.siteMetadata.title} />
-            </footer>
+            </Foot>
     </>
   )
 }

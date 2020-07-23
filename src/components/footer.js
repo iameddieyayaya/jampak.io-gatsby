@@ -60,7 +60,7 @@ const Footer = ({ siteTitle }) => {
                 </LogoWrapper>
                 <LinkWrapper>
                     <Link
-                        to="/"
+                        to="/contact"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
@@ -69,13 +69,13 @@ const Footer = ({ siteTitle }) => {
                             Contact
                     </Link>
                     <Link
-                        to="/"
+                        to="/donate"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
                         }}
                         >
-                            Support
+                            Donate
                     </Link>
                     <Link
                         to="/"
@@ -95,15 +95,15 @@ const Footer = ({ siteTitle }) => {
                         >
                             Performing
                     </Link>
-                    <Link
-                        to="/"
+                    {/* <Link
+                        to="/about"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
                         }}
                         >
                             About
-                    </Link>
+                    </Link> */}
                 </LinkWrapper>
             
 

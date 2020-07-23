@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
-import Button from './styled/button'
-import Email from './styled/email'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
+// import Button from './styled/button'
+// import Email from './styled/email'
+// import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const Title = styled.h1`
-  padding-top: 70px;
+  padding-top: 8rem;
   font-size: 1.5em;
   text-align: center;
   color: #fff;

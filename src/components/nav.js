@@ -62,18 +62,18 @@ const Nav = ({className}) => {
             <UL className={className}>
                 <li>                    
                     <Link
-                    to="/"
+                    to="/howitworks"
                     style={{
                         color: `white`,
                         textDecoration: `none`,
                     }}
                     >
-                        How it Works
+                        How It Works
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link
-                        to="/"
+                        to="/perform"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
@@ -84,7 +84,7 @@ const Nav = ({className}) => {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/host"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
@@ -92,10 +92,10 @@ const Nav = ({className}) => {
                         >
                         Host
                     </Link>
-                </li>
+                </li> */}
                 <li>                    
                     <Link
-                        to="/"
+                        to="/donate"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
@@ -107,7 +107,7 @@ const Nav = ({className}) => {
                 <li role="separator" className="seperate"></li>
                 <li>                    
                     <Link
-                        to="/"
+                        to="/workinprogress"
                         style={{
                             color: `white`,
                             textDecoration: `none`,
@@ -119,7 +119,7 @@ const Nav = ({className}) => {
                 </li>
                 <li>                    
                     <Link
-                        to="/"
+                        to="/workinprogress"
                         style={{
                             color: `white`,
                             textDecoration: `none`,

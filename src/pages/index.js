@@ -11,19 +11,55 @@ import Card6 from '../components/card6'
 import UrOwnTerms from '../components/urOwnTerms'
 import EmailForm from '../components/emailForm'
 
-const IndexPage = () => (
+import BackgroundImage from "gatsby-background-image"
+import { graphql } from "gatsby"
+import styled from 'styled-components'
+
+
+const StyledBackgroundSection = styled(BackgroundImage)`
+  // width: 100%; 
+  // height: 100vh;
+
+  /* Laptop Monitors */
+  @media (min-width: 1024px) {
+     background-size: cover;
+  }
+`
+
+
+const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
+
+
+    <StyledBackgroundSection 
+      fluid={props.data.indexImage.childImageSharp.fluid}
+      fadeIn
+    >
+
     <Main form={<EmailForm />}/>
-    <Card1/>
-    <Card2/>
-    <UrOwnTerms />
+
+    </StyledBackgroundSection>
+    
+    {/* <Card2/> */}
+    {/* <UrOwnTerms />
     <Card3/>
     <Card4/>
     <Card5/>
-    <Card6/>
+    <Card6/> */}
   </Layout>
 )
 
 export default IndexPage
  
+export const pageQuery = graphql`
+  query {
+    indexImage: file(relativePath: { eq: "aure-pereira.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 3813, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

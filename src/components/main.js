@@ -1,39 +1,43 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
-// import Button from './styled/button'
-// import Email from './styled/email'
-// import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 const Title = styled.h1`
-  padding-top: 8rem;
+  padding-top: 20vh;
   font-size: 1.5em;
   text-align: center;
   color: #fff;
+  
+  /* Laptop Monitors */
+  @media (min-width: 1024px) {
+    padding-top: 11.5rem;
+    font-size: 2.8rem;
+    text-align: left;
+    margin-left: 3rem;
+  }
+`;
+
+const Subsection = styled.p`
+  font-size: 1rem;
+  width: 70vw;
+  margin: 0 auto;
+  color: #fff;
+  margin-bottom: 15px;
 
   /* Laptop Monitors */
   @media (min-width: 1024px) {
-    font-size: 4rem;
+    text-align: left;
+    margin-left: 3rem;
+    width: 25rem;;
+
   }
-
 `;
-
-const Subtitle = styled.h2`
-  font-size: 1em;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 2rem;
-`;
-
-
 
 const MainWrapper = styled.div`
   background-color: rgba(0, 0, 56, 46%);
   width: 100vw;
   height: 100vh;
   color: #fff;
-  text-align: center;
+  
 
   /* Laptop Monitors */
   @media (min-width: 1024px) {
@@ -41,54 +45,36 @@ const MainWrapper = styled.div`
   }
 `
 
-const BackgroundSection = ({ className, form }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        desktop: file(relativePath: { eq: "aure-pereira.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      // Set ImageData.
-      const imageData = data.desktop.childImageSharp.fluid
+const Form = styled.div`
+  text-align: center;  
 
-      return (
-          <BackgroundImage
-          Tag="section"
-          className={className}
-          fluid={imageData}
-          backgroundColor={`#000`}
-        >
-            <MainWrapper>
-              <div>
-                <Title>Intimate Shows Anywhere</Title>
-                <Subtitle>Host</Subtitle>
-                <Subtitle>Book</Subtitle>
-                <Subtitle>Build A Team</Subtitle>
-                <Subtitle>Remix & Collab</Subtitle>
-                <Subtitle>Find Up & Coming Artist</Subtitle>
-                {form}
-              </div>              
-            </MainWrapper>
-          </BackgroundImage>
-      )
-    }}
-  />
-)
-
-const StyledBackgroundSection = styled(BackgroundSection)`
+  /* Laptop Monitors */
   @media (min-width: 1024px) {
-      background-position: center;
-      background-size: cover;
+    margin-left: 3rem;
+    text-align: left;
+    font-size: 1rem;
 
   }
 `
 
+const Main = ({ form }) => {
 
-export default StyledBackgroundSection
+  return (
+      <MainWrapper>
+        <div>
+          <Title>Intimate Shows Anywhere</Title>
+          <Subsection>
+            An application to support local artist.
+            Help with creating campaigns for performing, hosting, and curating shows.
+            Most importantly <br/> <strong> Let's get you paid!</strong>
+          </Subsection>
+          <Form>
+          {form}
+          </Form>
+        </div>              
+      </MainWrapper>
+  ) 
+}
+
+
+export default Main;

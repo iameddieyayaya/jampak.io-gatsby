@@ -29,7 +29,7 @@ const Overlay = styled.header`
 const NavWrapper = styled.nav`
     background-color: rgba(0, 0, 0, 0.4);
     margin: 0 auto;
-    padding: 0.25rem 1.0875rem;
+    padding: 0.25rem 1.26rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,11 +39,12 @@ const NavWrapper = styled.nav`
     top: 0;
     left: 0;
 
-
     
     /* Screen >= Tablets */
     @media (min-width: 768px) {
       height: 80px;
+      padding: 0.25rem 3rem;
+
   }
 
 

@@ -36,8 +36,8 @@ const UL = styled.ul`
         margin: 0;
         height: 100%;
         align-items: center;
-        justify-content: space-around;
-        width: 55%;
+        justify-content: inherit;
+        width: 40vw;
 
         li, .sub {
             font-size: 16px;
